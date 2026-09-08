@@ -166,14 +166,34 @@ def for_product(category: ProductCategory, display_name: str) -> dict[str, re.Pa
     return patterns
 
 
+# A phrase longer than this is not a topic, and the tool echoes it back, so it
+# is also the cap on how much caller-supplied text can enter the payload.
+MAX_AD_HOC_CHARS = 40
+MAX_AD_HOC_WORDS = 4
+
+
+def clean_phrase(phrase: str | None) -> str:
+    """The caller's topic, reduced to something safe to echo and to match on."""
+    if not isinstance(phrase, str):
+        return ""
+    words = [w for w in re.split(r"[^\w'-]+", phrase.lower()) if len(w) > 2]
+    return " ".join(words[:MAX_AD_HOC_WORDS])[:MAX_AD_HOC_CHARS].strip()
+
+
 def ad_hoc(phrase: str) -> re.Pattern[str] | None:
     """A pattern for something the user asked about that no lexicon covers.
 
     This is what keeps the fixed vocabulary from being a ceiling. Someone asking
-    about "sensitive stomachs" or "puppies" gets the same statistics computed
+    about "sensitive stomach" or "puppies" gets the same statistics computed
     over the same corpus, just matched on their words instead of ours.
+
+    Every word must appear, not any of them. Matching "sensitive stomach" as
+    either word counts every review mentioning a stomach and every review
+    mentioning a sensitive anything, and reports the total as the share of
+    people discussing sensitive stomachs.
     """
-    words = [w for w in re.split(r"[^\w'-]+", phrase.lower()) if len(w) > 2]
+    words = clean_phrase(phrase).split()
     if not words:
         return None
-    return _pattern(words)
+    lookaheads = "".join(rf"(?=.*\b{re.escape(w)}\b)" for w in words)
+    return re.compile(lookaheads + r".", re.IGNORECASE | re.DOTALL)

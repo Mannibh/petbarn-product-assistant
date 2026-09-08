@@ -126,9 +126,34 @@ def matching(reviews: list[Review], pattern: re.Pattern[str]) -> list[Review]:
     ]
 
 
-def aspect_table(
-    product: Product, reviews: list[Review], *, extra: str | None = None
-) -> list[AspectStat]:
+def aspect_row(
+    reviews: list[Review], pattern: re.Pattern[str], *, aspect: str, label: str
+) -> AspectStat | None:
+    """One row of the aspect table. None when nobody raised the subject."""
+    hits = matching(reviews, pattern)
+    if not hits:
+        return None
+
+    hit_ids = {r.review_id for r in hits}
+    others = [r for r in reviews if r.review_id not in hit_ids]
+
+    hit_mean = sum(r.rating for r in hits) / len(hits)
+    other_mean = sum(r.rating for r in others) / len(others) if others else hit_mean
+
+    return AspectStat(
+        aspect=aspect,
+        label=label,
+        mentions=len(hits),
+        share_of_reviews=round(len(hits) / len(reviews), 3),
+        mean_rating=round(hit_mean, 2),
+        # Rounded once, at the end, so the published delta is the rounded
+        # difference rather than a difference of roundings.
+        delta_vs_others=round(hit_mean - other_mean, 2),
+        low_confidence=len(hits) < MIN_MENTIONS_FOR_CONFIDENCE or not others,
+    )
+
+
+def aspect_table(product: Product, reviews: list[Review]) -> list[AspectStat]:
     """Mentions and rating delta for each aspect, busiest first.
 
     delta_vs_others is the number that carries meaning. A negative delta says
@@ -146,40 +171,11 @@ def aspect_table(
     if not reviews:
         return []
 
-    patterns = dict(aspects.for_product(product.category, product.display_name))
-
-    if extra:
-        pattern = aspects.ad_hoc(extra)
-        if pattern is not None:
-            patterns[extra] = pattern
-
-    table: list[AspectStat] = []
-    for name, pattern in patterns.items():
-        hits = matching(reviews, pattern)
-        if not hits:
-            continue
-
-        hit_ids = {r.review_id for r in hits}
-        others = [r for r in reviews if r.review_id not in hit_ids]
-
-        hit_mean = sum(r.rating for r in hits) / len(hits)
-        other_mean = sum(r.rating for r in others) / len(others) if others else hit_mean
-
-        table.append(
-            AspectStat(
-                aspect=name,
-                label=aspects.READABLE.get(name, name),
-                mentions=len(hits),
-                share_of_reviews=round(len(hits) / len(reviews), 3),
-                mean_rating=round(hit_mean, 2),
-                # Rounded once, at the end, so the published delta is the
-                # rounded difference rather than a difference of roundings.
-                delta_vs_others=round(hit_mean - other_mean, 2),
-                low_confidence=len(hits) < MIN_MENTIONS_FOR_CONFIDENCE or not others,
-            )
-        )
-
-    return sorted(table, key=lambda a: a.mentions, reverse=True)
+    rows = [
+        aspect_row(reviews, pattern, aspect=name, label=aspects.READABLE.get(name, name))
+        for name, pattern in aspects.for_product(product.category, product.display_name).items()
+    ]
+    return sorted((r for r in rows if r), key=lambda a: a.mentions, reverse=True)
 
 
 def recent(reviews: list[Review], *, today: date | None = None,
