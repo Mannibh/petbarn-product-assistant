@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+.venv/
+venv/
+
+.pytest_cache/
+.coverage
+
+# Archived third-party responses. Kept locally so a parser fix can be re-run
+# without hitting Petbarn again, never published: the untouched API bodies still
+# carry reviewer nicknames, cities and author ids that the snapshot strips out.
+data/raw/
+
+# Output of a --only run. Useful locally, never the real dataset.
+data/snapshot-partial/
+
+.streamlit/secrets.toml
+
+.DS_Store
