@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "captured_at": "2026-09-08T09:14:27.040676Z",
+  "ingest_commit": null,
+  "product_count": 9,
+  "counts": {
+    "royal-canin-maxi": {
+      "total_reviews": 254,
+      "text_reviews": 127,
+      "critical_text_reviews": 1
+    },
+    "black-hawk-lamb-rice": {
+      "total_reviews": 1253,
+      "text_reviews": 688,
+      "critical_text_reviews": 25
+    },
+    "prime100-roo-roll": {
+      "total_reviews": 1215,
+      "text_reviews": 529,
+      "critical_text_reviews": 26
+    },
+    "pro-plan-chicken-cat-pouch": {
+      "total_reviews": 351,
+      "text_reviews": 335,
+      "critical_text_reviews": 10
+    },
+    "breeders-choice-litter": {
+      "total_reviews": 1076,
+      "text_reviews": 423,
+      "critical_text_reviews": 33
+    },
+    "barkers-best-biscuits": {
+      "total_reviews": 374,
+      "text_reviews": 165,
+      "critical_text_reviews": 8
+    },
+    "love-em-beef-liver": {
+      "total_reviews": 488,
+      "text_reviews": 198,
+      "critical_text_reviews": 2
+    },
+    "nexgard-spectra-15-30": {
+      "total_reviews": 1034,
+      "text_reviews": 370,
+      "critical_text_reviews": 10
+    },
+    "simparica-trio-20-40": {
+      "total_reviews": 619,
+      "text_reviews": 219,
+      "critical_text_reviews": 11
+    }
+  },
+  "flagged_review_count": 0
+}

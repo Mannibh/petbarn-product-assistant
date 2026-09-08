@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "captured_at": "2026-09-08T09:14:27.040676Z",
+  "products": [
+    {
+      "catalogue_id": "royal-canin-maxi",
+      "display_name": "Royal Canin Maxi Breed Adult Dog Food",
+      "brand": "Royal Canin",
+      "category": "dog_food",
+      "pack_size": "15kg",
+      "sku": "30299",
+      "slug": "royal-canin-maxi-adult-dog-food-15kg",
+      "price_aud": 233.99,
+      "member_price_aud": 159.0,
+      "in_stock": true,
+      "description": "ROYAL CANIN Maxi Adult is a nutritionally complete and balanced formula specially designed to meet your large dogs particular needs and support them throughout their adult years. This diet is for large dogs that weigh between 26 and 44kg and are over 15 months old. Larger dogs, with their extended digestive transit time, are more susceptible to digestive sensitivities compared to smaller breeds. This kibble contains highly digestible proteins and a balanced supply of fibres to help support good digestive health. Whether theyre working or playing, larger dogs place the majority of their body weight on their joints. This formula is specially crafted with a combination of minerals and nutrients to help support healthy bones and joints. Catered to the unique needs of your large dog, this food is crafted with a blend of vitamins and high-quality nutrients for maximal absorption and support overall health. Considering the distinct jaw structure of larger breeds, our kibbles unique size and shape mean it is adapted to fit your dogs jaw and helps encourage them to chew their food properly. Our team of scientists create formulas tailored to your large dogs specific nutritional needs, using high-quality nutrients and keeping sustainability in mind. Please Note: ROYAL CANIN takes pride in ensuring the scientific reliability of all product information. The information in this product listing was true and accurate at the time of publication. However, please note that from time to time, for example due to ingredient availability or a change in sourcing factory within our global factory network for the purpose of ongoing supply, it is necessary to make product changes at short notice, and there may be some delays in updating the information in our product materials.",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/3/0/30299_RC-DF-ADT-MAXI-15kg_1.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 254,
+        "text_reviews": 127,
+        "mean_rating": 4.893700787401575,
+        "distribution": {
+          "stars_1": 1,
+          "stars_2": 1,
+          "stars_3": 2,
+          "stars_4": 16,
+          "stars_5": 234
+        },
+        "secondary_averages": {
+          "quality": 4.928571428571429,
+          "value": 4.611111111111111,
+          "pet_satisfaction": 4.875
+        },
+        "recommended": 82,
+        "not_recommended": 1,
+        "first_review_on": "2022-04-06",
+        "last_review_on": "2026-09-05"
+      }
+    },
+    {
+      "catalogue_id": "black-hawk-lamb-rice",
+      "display_name": "Black Hawk Lamb and Rice Adult Dog Food",
+      "brand": "Black Hawk",
+      "category": "dog_food",
+      "pack_size": "20kg",
+      "sku": "127959",
+      "slug": "black-hawk-lamb-rice-adult-dog-food",
+      "price_aud": 200.99,
+      "member_price_aud": 149.0,
+      "in_stock": true,
+      "description": "Black Hawk Lamb & Rice Holistic Adult Formula is designed to meet the AAFCO standards for growth and maintenance of dogs, which ensures your pet has the correct nutrients, vitamins and minerals. This formula includes blueberries - known to have natural antioxidant properties; dandelion - rich in magnesium, potassium and calcium; and rosemary - can assist with new hair growth and may reduce bad breath. Black Hawk Lamb & Rice Adult Formula is high in energy, protein and fat, and is suitable for small to large breed dogs. It is ideal for all life stages. Lamb is easily digested, therefore a great diet for dogs with sensitive stomachs. Often used by working dogs, greyhounds, sled dogs, agility etc. Made in Australia.",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/1/2/127959_original-adult-lamb-n-rice_20KG_1.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 1253,
+        "text_reviews": 689,
+        "mean_rating": 4.793296089385475,
+        "distribution": {
+          "stars_1": 19,
+          "stars_2": 8,
+          "stars_3": 27,
+          "stars_4": 105,
+          "stars_5": 1094
+        },
+        "secondary_averages": {
+          "quality": 4.808943089430894,
+          "value": 4.4526748971193415,
+          "pet_satisfaction": 4.758064516129032
+        },
+        "recommended": 469,
+        "not_recommended": 12,
+        "first_review_on": "2020-01-17",
+        "last_review_on": "2026-09-07"
+      }
+    },
+    {
+      "catalogue_id": "prime100-roo-roll",
+      "display_name": "Prime100 Kangaroo and Pumpkin Cooked Dog Roll",
+      "brand": "Prime100",
+      "category": "dog_food",
+      "pack_size": "2kg",
+      "sku": "133076",
+      "slug": "prime100-kangaroo-pumpkin-cooked-dog-roll-2kg",
+      "price_aud": 26.99,
+      "member_price_aud": null,
+      "in_stock": true,
+      "description": "Prime100 SPD Fresh Roll Kangaroo & Pumpkin is a novel, hypoallergenic, single protein diet created for dogs with suspected food sensitivities, skin allergies or digestive issues. Ideal for elimination diets, food trials or to be fed as an ongoing maintenance diet. This complete and balanced, low-fat diet is formulated for adult and senior dogs with acute gastrointestinal indications such as pancreatitis, IBD or diabetes. Added pumpkin is a rich source of fibre and supports urinary health. Algae extracts and oils boost the immunity and strengthen the digestive system in dogs. Our functional protein, select ingredient diets are made in small batches and packed raw in their final packaging, then gently steam cooked and allowed to rest for up to 24 hours. Serve straight from your fridge! Available in 800g & 2kg.",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/1/3/133076_PRIME100-DF-RL-SPD-ROO-PM-2kg_p1.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 1215,
+        "text_reviews": 530,
+        "mean_rating": 4.789300411522634,
+        "distribution": {
+          "stars_1": 16,
+          "stars_2": 13,
+          "stars_3": 23,
+          "stars_4": 107,
+          "stars_5": 1056
+        },
+        "secondary_averages": {
+          "quality": 4.823671497584541,
+          "value": 4.533980582524272,
+          "pet_satisfaction": 4.844497607655502
+        },
+        "recommended": 407,
+        "not_recommended": 15,
+        "first_review_on": "2022-07-23",
+        "last_review_on": "2026-09-08"
+      }
+    },
+    {
+      "catalogue_id": "pro-plan-chicken-cat-pouch",
+      "display_name": "Pro Plan Chicken Adult Cat Food Pouches",
+      "brand": "Pro Plan",
+      "category": "cat_food",
+      "pack_size": "85g x 12",
+      "sku": "138484",
+      "slug": "pro-plan-chicken-adult-cat-pouch-85gx12",
+      "price_aud": 40.99,
+      "member_price_aud": 31.0,
+      "in_stock": true,
+      "description": "Pro Plan Adult wet cat food is scientifically formulated to be 100% complete and balanced, containing all of the essential nutrition your adult cat needs, including a balance of protien and calories to help maintain a lean body condition and inulin to support superior nutrient absorption. It is made with real Chicken in a tasty gravy for a delicious flavour your cat will love. Benefirs • Contains inulin to support superior nutrient absorption • Dietary fibre helps reduce hairball formation and supports a healthy digestive system • Contains inulin to help reduce litterbox odour • Balance of protein and calories to help maintain a lean body condition",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/1/3/138484_PPL_CF_ADT_CHICKEN_85gx12_3.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 351,
+        "text_reviews": 336,
+        "mean_rating": 4.7920227920227925,
+        "distribution": {
+          "stars_1": 1,
+          "stars_2": 2,
+          "stars_3": 7,
+          "stars_4": 49,
+          "stars_5": 292
+        },
+        "secondary_averages": {
+          "quality": 4.848387096774194,
+          "value": 4.53074433656958,
+          "pet_satisfaction": 4.872964169381108
+        },
+        "recommended": 293,
+        "not_recommended": 7,
+        "first_review_on": "2022-06-25",
+        "last_review_on": "2026-06-19"
+      }
+    },
+    {
+      "catalogue_id": "breeders-choice-litter",
+      "display_name": "Breeders Choice Cat Litter",
+      "brand": "Breeders Choice",
+      "category": "cat_litter",
+      "pack_size": "30L",
+      "sku": "117874",
+      "slug": "breeders-choice-cat-litter",
+      "price_aud": 38.49,
+      "member_price_aud": 32.5,
+      "in_stock": true,
+      "description": "Breeders Choice Cat Litter Pellets are superior cat litter made from 99% recycled paper with no additives or chemicals. Acts as a natural odour control, these cat litter pellets are highly absorbent, biodegradable and last long, proven to be environmentally friendly. They are also lightweight and easy to handle which also contribute in reducing transport emission. Comes with easy pour sprout, which make them easier to lift, carry and use. Loyal pet owners, breeders and veterinarians agree that other litters are simply \"left in the dust!\" Breeders Choice Cat Litter is suitable for all cat breeds. The easiest choice for all cat owners. If your pet does not readily accept the new pellets, sprinkle some over existing litter, & increase new pellets daily. For best results, remove waste (solid and urine) regularly & stir pellets to aerate. Top up with fresh pellets as needed, & completely replace at least once a week. Waste can be used as a surface mulch. Breeders Choice is a registered trademarks of FibreCycle Pty Ltd/ the company originally collected and processed paper and cardboard for paper mills. This company's original technology and process was refined to create a uniquely formulated pelleted litter which is made from 99% recycled paper, with no additives or chemicals, and which exceeds the properties of traditional products. Product launches have demonstrated an overwhelming acceptance of this recycled paper product. This support from pet owners, breeders, veterinarians, pet shops and supermarket chains, has seen FibreCycle evolve from a local Australian business to a worldwide success. • Natural Odour Control • Recycled Paper Pellets - Natural Cellulose Fiber With No Additives or Chemicals • Highly Absorbent - Superior Performance • Virtually Dust-Free - Reduces Tracking and Will Not Mark Floors • Lightweight - Easy to Handle",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/1/1/117874_BC_CAT_LITT_30L_1_updated_resized.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 1076,
+        "text_reviews": 423,
+        "mean_rating": 4.732342007434944,
+        "distribution": {
+          "stars_1": 20,
+          "stars_2": 7,
+          "stars_3": 39,
+          "stars_4": 109,
+          "stars_5": 901
+        },
+        "secondary_averages": {
+          "quality": 4.771929824561403,
+          "value": 4.522184300341297,
+          "pet_satisfaction": 4.7542662116040955
+        },
+        "recommended": 273,
+        "not_recommended": 11,
+        "first_review_on": "2022-04-06",
+        "last_review_on": "2026-09-08"
+      }
+    },
+    {
+      "catalogue_id": "barkers-best-biscuits",
+      "display_name": "Barkers Best Variety Bone Biscuit Dog Treats",
+      "brand": "Barkers Best",
+      "category": "dog_treat",
+      "pack_size": "750g",
+      "sku": "138869",
+      "slug": "barkers-best-variety-bone-biscuit-dog-treat-750g",
+      "price_aud": 9.0,
+      "member_price_aud": null,
+      "in_stock": true,
+      "description": "Specially formulated, these Barkers Best Variety Dog Biscuits are not only delicious but are also highly nutritional. Designed to keep your dog's teeth and gums clean and strong, these bone-shaped biscuits are great as either standalone treats or training aids. Delicious, freshly oven-baked treats with a crunch sensation that your best friend will love. Australian made treats that are suitable as a snack, reward or gift to show how much you love them, whatever the occasion!.",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/1/3/138869_BB_DG_TRT_BISCUIT_VRTY_750g_1.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 374,
+        "text_reviews": 165,
+        "mean_rating": 4.705882352941177,
+        "distribution": {
+          "stars_1": 7,
+          "stars_2": 0,
+          "stars_3": 15,
+          "stars_4": 52,
+          "stars_5": 300
+        },
+        "secondary_averages": {
+          "quality": 4.7443609022556394,
+          "value": 4.819548872180451,
+          "pet_satisfaction": 4.794117647058823
+        },
+        "recommended": 125,
+        "not_recommended": 6,
+        "first_review_on": "2024-04-13",
+        "last_review_on": "2026-09-07"
+      }
+    },
+    {
+      "catalogue_id": "love-em-beef-liver",
+      "display_name": "Love Em Air Dried Beef Liver Dog Treats",
+      "brand": "Love Em",
+      "category": "dog_treat",
+      "pack_size": "500g",
+      "sku": "141648",
+      "slug": "love-em-air-dried-beef-liver-dog-treat",
+      "price_aud": 28.0,
+      "member_price_aud": null,
+      "in_stock": true,
+      "description": "Training your furry friend is a lot more fun and effective when you toss them a few tasty bites with every trick. Love'em Air Dried Beef Liver Dog Treats are the perfect reward for your pet, combining quality ingredients with great taste. Made with real Australian beef liver, these munchies are not only delicious, but are free from artificial colours, flavours and preservatives too. These treats are all natural and packed with Vitamin A, Zinc and Iron, making them a healthy choice for your pet. Your dog's tail will wag at the sight of these tasty liver treats. Easily break them into little pieces, and feed to your pet as a special treat from time to time.",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/1/4/141648-BF-LVR-500g-1.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 488,
+        "text_reviews": 199,
+        "mean_rating": 4.854508196721311,
+        "distribution": {
+          "stars_1": 2,
+          "stars_2": 1,
+          "stars_3": 10,
+          "stars_4": 40,
+          "stars_5": 435
+        },
+        "secondary_averages": {
+          "quality": 4.901315789473684,
+          "value": 4.660130718954249,
+          "pet_satisfaction": 4.966887417218543
+        },
+        "recommended": 158,
+        "not_recommended": 2,
+        "first_review_on": "2024-04-13",
+        "last_review_on": "2026-09-08"
+      }
+    },
+    {
+      "catalogue_id": "nexgard-spectra-15-30",
+      "display_name": "NexGard Spectra Chews for Dogs 15.1-30kg",
+      "brand": "NexGard",
+      "category": "parasite_control",
+      "pack_size": "15.1-30kg",
+      "sku": "134736",
+      "slug": "nexgard-spectra-for-dogs-15-1-30kg",
+      "price_aud": 182.0,
+      "member_price_aud": 102.0,
+      "in_stock": true,
+      "description": "NexGard SPECTRA (Purple) is suitable for large dogs from 15.1 - 30 kg in bodyweight. With NexGard SPECTRA, your dog will receive the most complete protection against fleas, ticks, mites, lice, heartworm and intestinal worms, all in one tasty chew. Did you know that some parasites that affect pets can be transmitted to people? Using NexGard SPECTRA aligns with guidelines from infectious disease experts who recommend monthly deworming of all dogs to reduce the risk.* Protect from Fleas: NexGard SPECTRA kills fleas on dogs for 5 weeks (35 days). By killing fleas fast it breaks the flea lifecycle, helping keep your dog healthy and your home flea free. Protect from Ticks: NexGard SPECTRA kills ticks on dogs (paralysis ticks, bush ticks and brown dog ticks) for 35 days (5 weeks) ensuring protection for a full month. Protect from Mites NexGard SPECTRA treats and controls ear mites, demodectic mange and sarcoptic mange. Protect from Lice NexGard SPECTRA treats and controls biting lice on dogs. Protect from Heartworm NexGard SPECTRA, given monthly throughout the year, provides effective heartworm prevention for dogs. Protect from Worms NexGard SPECTRA treats and controls roundworm, hookworm and whipworm. Through its rapid effect on fleas, NexGard SPECTRA also prevents the transmission of flea tapeworm. *Australian Companion Animal Zoonoses Advisory Panel (2021) Companion Animal Zoonoses Guidelines. See product label for full claim details and directions for use.",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/2/5/25217_134736_nexgard_spectra_6_pack_front_15_1.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 1034,
+        "text_reviews": 370,
+        "mean_rating": 4.811411992263056,
+        "distribution": {
+          "stars_1": 15,
+          "stars_2": 7,
+          "stars_3": 14,
+          "stars_4": 86,
+          "stars_5": 912
+        },
+        "secondary_averages": {
+          "quality": 4.887096774193548,
+          "value": 4.5303514376996805,
+          "pet_satisfaction": 4.714754098360656
+        },
+        "recommended": 309,
+        "not_recommended": 5,
+        "first_review_on": "2022-04-06",
+        "last_review_on": "2026-09-04"
+      }
+    },
+    {
+      "catalogue_id": "simparica-trio-20-40",
+      "display_name": "Simparica Trio Flea Tick and Worm Chew for Dogs 20.1-40kg",
+      "brand": "Simparica",
+      "category": "parasite_control",
+      "pack_size": "20.1-40kg",
+      "sku": "139850",
+      "slug": "simparica-trio-20-1-40kg-dog-flea-tick-worm-chew",
+      "price_aud": 184.0,
+      "member_price_aud": 94.0,
+      "in_stock": true,
+      "description": "Between the warm climate, our love for the outdoors and your dog's innate ability to find the muddiest, smelliest spot to roll around in - effective, year-round parasite protection is a non-negotiable in Australia. Simparica TRIO is a monthly chew that provides vet grade protection against the opportunistic, blood-thirsty freeloaders that prey upon our furry friends. TRIO delivers APVMA-approved, all-in-one protection against a whole gamut of these nasty, hitchhiking parasites like (deep breath) fleas, paralysis ticks, deadly heartworm, roundworm, hookworm, mites, mange and even mosquitoes. It's developed by the world's leading animal health company, lasts up to 35 days and has a tasty liver flavour so you get peace of mind, a little leeway and they get their treatment disguised as a treat. Simparica TRIO. Vet grade protection for dogs, trusted by dog people across Australia and the world.",
+      "image_url": "https://www.petbarn.com.au/media/catalog/product/1/3/139850_ST_LD_Green_6pk_1.jpg?optimize=medium&fit=bounds&height=120&width=120",
+      "summary": {
+        "total_reviews": 619,
+        "text_reviews": 219,
+        "mean_rating": 4.775444264943457,
+        "distribution": {
+          "stars_1": 12,
+          "stars_2": 3,
+          "stars_3": 11,
+          "stars_4": 60,
+          "stars_5": 533
+        },
+        "secondary_averages": {
+          "quality": 4.892857142857143,
+          "value": 4.680722891566265,
+          "pet_satisfaction": 4.817073170731708
+        },
+        "recommended": 164,
+        "not_recommended": 6,
+        "first_review_on": "2022-04-06",
+        "last_review_on": "2026-09-06"
+      }
+    }
+  ]
+}
