@@ -1,0 +1,254 @@
+{
+ "TotalResults": 165,
+ "Limit": 100,
+ "Offset": 0,
+ "HasErrors": false,
+ "Errors": [],
+ "Results": [
+  {
+   "Id": "1228886080",
+   "CID": "92868ab0-8010-5d94-85ff-f4d524414aca",
+   "SourceClient": "petbarn-au",
+   "Badges": {
+    "verifiedPurchaser": {
+     "ContentType": "REVIEW",
+     "Id": "verifiedPurchaser",
+     "BadgeType": "Custom"
+    }
+   },
+   "BadgesOrder": [
+    "verifiedPurchaser"
+   ],
+   "LastModeratedTime": "2026-09-03T11:32:55.000+00:00",
+   "LastModificationTime": "2026-09-03T11:32:55.000+00:00",
+   "ProductId": "138869",
+   "OriginalProductName": "Barkers Best Variety Bone Biscuit Dog Treat 750g",
+   "CampaignId": "BV_PIE_MPR",
+   "ContentLocale": "en_AU",
+   "IsFeatured": false,
+   "TotalInappropriateFeedbackCount": 0,
+   "TotalClientResponseCount": 0,
+   "TotalCommentCount": 0,
+   "Rating": 5,
+   "SecondaryRatingsOrder": [
+    "Quality",
+    "Value",
+    "Petsatisfaction"
+   ],
+   "IsRatingsOnly": false,
+   "IsRecommended": true,
+   "TotalFeedbackCount": 0,
+   "TotalNegativeFeedbackCount": 0,
+   "TotalPositiveFeedbackCount": 0,
+   "ModerationStatus": "APPROVED",
+   "SubmissionId": "r226118_2__17884099OkWNcJdSeO",
+   "SubmissionTime": "2026-09-03T04:32:13.000+00:00",
+   "ReviewText": "LOVE these treats....well the dogs do. Great value, great product, great treat training.",
+   "Title": "LOVE these treats",
+   "SecondaryRatings": {
+    "Value": {
+     "Value": 5,
+     "Id": "Value",
+     "DisplayType": "NORMAL",
+     "MaxLabel": null,
+     "MinLabel": null,
+     "ValueRange": 5,
+     "Label": null,
+     "ValueLabel": null
+    },
+    "Quality": {
+     "Value": 5,
+     "Id": "Quality",
+     "DisplayType": "NORMAL",
+     "MaxLabel": null,
+     "MinLabel": null,
+     "ValueRange": 5,
+     "Label": null,
+     "ValueLabel": null
+    },
+    "Petsatisfaction": {
+     "Value": 5,
+     "Id": "Petsatisfaction",
+     "DisplayType": "NORMAL",
+     "MaxLabel": null,
+     "MinLabel": null,
+     "ValueRange": 5,
+     "Label": null,
+     "ValueLabel": null
+    }
+   },
+   "Helpfulness": null,
+   "AdditionalFieldsOrder": [],
+   "Pros": null,
+   "ProductRecommendationIds": [],
+   "ContextDataValuesOrder": [],
+   "InappropriateFeedbackList": [],
+   "RatingRange": 5,
+   "TagDimensions": {},
+   "Cons": null,
+   "CommentIds": [],
+   "TagDimensionsOrder": [],
+   "ClientResponses": [],
+   "IsSyndicated": false
+  },
+  {
+   "Id": "1228783455",
+   "CID": "0099d8a5-13bb-5f62-be9c-ca8597f11699",
+   "SourceClient": "petbarn-au",
+   "Badges": {
+    "verifiedPurchaser": {
+     "ContentType": "REVIEW",
+     "Id": "verifiedPurchaser",
+     "BadgeType": "Custom"
+    }
+   },
+   "BadgesOrder": [
+    "verifiedPurchaser"
+   ],
+   "LastModeratedTime": "2026-09-01T19:03:02.000+00:00",
+   "LastModificationTime": "2026-09-01T19:03:02.000+00:00",
+   "ProductId": "138869",
+   "OriginalProductName": "Barkers Best Variety Bone Biscuit Dog Treat 750g",
+   "CampaignId": "BV_PIE_MPR",
+   "ContentLocale": "en_AU",
+   "IsFeatured": false,
+   "TotalInappropriateFeedbackCount": 0,
+   "TotalClientResponseCount": 0,
+   "TotalCommentCount": 0,
+   "Rating": 5,
+   "SecondaryRatingsOrder": [
+    "Quality"
+   ],
+   "IsRatingsOnly": false,
+   "IsRecommended": true,
+   "TotalFeedbackCount": 0,
+   "TotalNegativeFeedbackCount": 0,
+   "TotalPositiveFeedbackCount": 0,
+   "ModerationStatus": "APPROVED",
+   "SubmissionId": "r226118_2__178828208jraDcvraB",
+   "SubmissionTime": "2026-09-01T17:00:34.000+00:00",
+   "ReviewText": "Barkers Best Variety Pack",
+   "Title": "Amazing snack for my dogs added treats",
+   "SecondaryRatings": {
+    "Quality": {
+     "Value": 5,
+     "Id": "Quality",
+     "DisplayType": "NORMAL",
+     "MaxLabel": null,
+     "MinLabel": null,
+     "ValueRange": 5,
+     "Label": null,
+     "ValueLabel": null
+    }
+   },
+   "Helpfulness": null,
+   "AdditionalFieldsOrder": [],
+   "Pros": null,
+   "ProductRecommendationIds": [],
+   "ContextDataValuesOrder": [],
+   "InappropriateFeedbackList": [],
+   "RatingRange": 5,
+   "TagDimensions": {},
+   "Cons": null,
+   "CommentIds": [],
+   "TagDimensionsOrder": [],
+   "ClientResponses": [],
+   "IsSyndicated": false
+  },
+  {
+   "Id": "1222494741",
+   "CID": "7f22bef6-0269-5962-be55-19177f3cd146",
+   "SourceClient": "petbarn-au",
+   "Badges": {
+    "verifiedPurchaser": {
+     "ContentType": "REVIEW",
+     "Id": "verifiedPurchaser",
+     "BadgeType": "Custom"
+    }
+   },
+   "BadgesOrder": [
+    "verifiedPurchaser"
+   ],
+   "LastModeratedTime": "2026-06-21T00:16:57.000+00:00",
+   "LastModificationTime": "2026-06-21T04:27:35.000+00:00",
+   "ProductId": "138869",
+   "OriginalProductName": "Barkers Best Variety Bone Biscuit Dog Treat 750g",
+   "CampaignId": "BV_PIE_MPR",
+   "ClientResponses": [
+    {
+     "Department": "Customer Service",
+     "Response": "Thanks so much for your feedback! We\u2019re glad your dog is loving the Barkers Best biscuits and that the variety of flavours has been a hit.\n\n\n  Customer Service",
+     "ResponseSource": "Zendesk Integration",
+     "Name": "Customer Service",
+     "Date": "2026-06-21T04:27:35.000+00:00",
+     "SourceClientName": "Petbarn"
+    }
+   ],
+   "ContentLocale": "en_AU",
+   "IsFeatured": false,
+   "TotalInappropriateFeedbackCount": 0,
+   "TotalClientResponseCount": 1,
+   "TotalCommentCount": 0,
+   "Rating": 5,
+   "SecondaryRatingsOrder": [
+    "Quality",
+    "Value",
+    "Petsatisfaction"
+   ],
+   "IsRatingsOnly": false,
+   "IsRecommended": true,
+   "TotalFeedbackCount": 0,
+   "TotalNegativeFeedbackCount": 0,
+   "TotalPositiveFeedbackCount": 0,
+   "ModerationStatus": "APPROVED",
+   "SubmissionId": "r226118_2__17819992fSbo5EPIgw",
+   "SubmissionTime": "2026-06-20T23:48:12.000+00:00",
+   "ReviewText": "We have been buying these biskets for our dog has they have a good range of verity of flaviors",
+   "Title": "Our pet loves them",
+   "SecondaryRatings": {
+    "Value": {
+     "Value": 5,
+     "Id": "Value",
+     "DisplayType": "NORMAL",
+     "MaxLabel": null,
+     "MinLabel": null,
+     "ValueRange": 5,
+     "Label": null,
+     "ValueLabel": null
+    },
+    "Quality": {
+     "Value": 5,
+     "Id": "Quality",
+     "DisplayType": "NORMAL",
+     "MaxLabel": null,
+     "MinLabel": null,
+     "ValueRange": 5,
+     "Label": null,
+     "ValueLabel": null
+    },
+    "Petsatisfaction": {
+     "Value": 5,
+     "Id": "Petsatisfaction",
+     "DisplayType": "NORMAL",
+     "MaxLabel": null,
+     "MinLabel": null,
+     "ValueRange": 5,
+     "Label": null,
+     "ValueLabel": null
+    }
+   },
+   "Helpfulness": null,
+   "AdditionalFieldsOrder": [],
+   "Pros": null,
+   "ProductRecommendationIds": [],
+   "ContextDataValuesOrder": [],
+   "InappropriateFeedbackList": [],
+   "RatingRange": 5,
+   "TagDimensions": {},
+   "Cons": null,
+   "CommentIds": [],
+   "TagDimensionsOrder": [],
+   "IsSyndicated": false
+  }
+ ]
+}
