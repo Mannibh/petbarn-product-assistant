@@ -294,7 +294,13 @@ class Chain:
         problems: list[str] = []
 
         for provider in self.available:
-            left = None if budget is None else budget - (time.monotonic() - started)
+            # Whichever runs out first: what is left of the turn, or the cap on
+            # a single request. Passing the whole remaining budget let one slow
+            # provider spend all of it, so the healthy rungs behind it were
+            # never tried and the turn ended on the model-free fallback.
+            elapsed = time.monotonic() - started
+            left = (LIMITS.request_timeout_seconds if budget is None
+                    else min(budget - elapsed, LIMITS.request_timeout_seconds))
             if left is not None and left <= 0:
                 problems.append("ran out of time before trying " + provider.name)
                 break

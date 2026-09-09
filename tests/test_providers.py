@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import pytest
 
+from petbarn.config import LIMITS
 from petbarn.providers import (
     Anthropic,
     Chain,
@@ -73,6 +74,18 @@ def test_the_chain_shares_one_time_budget_across_providers():
 
     assert first.timeout == pytest.approx(10.0, abs=0.5)
     assert second.timeout is not None and second.timeout < 10.0
+
+
+def test_no_single_provider_may_spend_the_whole_turn():
+    """The budget is what is left of the turn, but one request must not consume
+    all of it: a slow first provider was eating the entire allowance, so the
+    healthy rungs behind it were never tried and the turn fell through to the
+    model-free answer."""
+    first, second = Stub("slow", error="timeout"), Stub("healthy")
+    Chain([first, second]).complete([], [], budget=45.0)
+
+    assert first.timeout <= LIMITS.request_timeout_seconds
+    assert second.timeout <= LIMITS.request_timeout_seconds
 
 
 def test_an_authentication_failure_moves_on_rather_than_stopping():
