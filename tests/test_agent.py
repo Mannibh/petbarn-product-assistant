@@ -261,6 +261,31 @@ def test_a_tool_reply_with_no_call_is_dropped():
     assert not any(m["role"] == "tool" for m in _trim(history))
 
 
+def test_provider_data_on_a_tool_call_is_sent_back_unchanged(snap):
+    """Gemini 3 signs each tool call and rejects the follow-up without that
+    signature, which silently turns a three-round conversation into one round
+    answered from no data. Capturing it is only half the fix; it has to go back."""
+    signed = ToolCall("c1", REVIEWS, {"product": "black-hawk-lamb-rice"},
+                      extra={"google": {"thought_signature": "sig-abc"}})
+    provider = Scripted(Completion(text="", tool_calls=(signed,)),
+                        Completion(text="4.79 stars."))
+
+    turn = answer("how is it?", [], Chain([provider]), snap)
+
+    sent = next(m for m in turn.messages if m.get("tool_calls"))
+    assert sent["tool_calls"][0]["extra_content"] == {"google": {"thought_signature": "sig-abc"}}
+
+
+def test_a_tool_call_without_provider_data_carries_no_extra_key(snap):
+    """Anthropic has no equivalent, and sending an empty field to a provider
+    that does not know it is a needless way to be rejected."""
+    provider = Scripted(calls(product="black-hawk-lamb-rice"), Completion(text="ok"))
+    turn = answer("how is it?", [], Chain([provider]), snap)
+
+    sent = next(m for m in turn.messages if m.get("tool_calls"))
+    assert "extra_content" not in sent["tool_calls"][0]
+
+
 def test_the_assistant_answer_is_kept_in_the_transcript(snap):
     """A follow-up question must not arrive in a conversation where the
     assistant never spoke."""

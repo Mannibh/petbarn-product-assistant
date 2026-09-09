@@ -197,7 +197,16 @@ class _Response:
         function = _Response._Function() if False else None
 
     def __init__(self):
-        call = type("Call", (), {"id": "call_1", "function": _Response._Function()})()
+        # model_dump is how the real SDK object exposes provider extras such as
+        # Gemini's thought signature, so the stand-in has to offer it too.
+        call = type("Call", (), {
+            "id": "call_1",
+            "function": _Response._Function(),
+            "model_dump": lambda self: {
+                "id": "call_1",
+                "extra_content": {"google": {"thought_signature": "sig-abc"}},
+            },
+        })()
         message = type("Msg", (), {"content": "here you are", "tool_calls": [call]})()
         self.choices = [type("Choice", (), {"message": message})()]
         self.usage = type("Usage", (), {"prompt_tokens": 11, "completion_tokens": 22})()
@@ -221,6 +230,9 @@ def test_the_openai_compatible_client_sends_and_parses_a_real_shaped_call(monkey
     assert completion.provider == "gemini"
     assert completion.tool_calls[0].arguments == {"product": "royal-canin-maxi"}
     assert (completion.input_tokens, completion.output_tokens) == (11, 22)
+    # Gemini 3 rejects the follow-up request without this, which silently turns
+    # a multi-round conversation into a single round.
+    assert completion.tool_calls[0].extra == {"google": {"thought_signature": "sig-abc"}}
 
 
 def test_an_sdk_failure_becomes_provider_unavailable(monkeypatch):

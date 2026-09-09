@@ -100,6 +100,23 @@ def _call_tool(call: ToolCall) -> ToolRun:
     )
 
 
+def _echo(call: ToolCall) -> dict:
+    """The call as it must be sent back on the next request.
+
+    Anything the provider attached to it goes back untouched. Gemini 3 signs
+    each call and rejects the follow-up without that signature, so dropping it
+    silently reduces every conversation to one round.
+    """
+    echoed = {
+        "id": call.id,
+        "type": "function",
+        "function": {"name": call.name, "arguments": json.dumps(call.arguments)},
+    }
+    if call.extra:
+        echoed["extra_content"] = call.extra
+    return echoed
+
+
 def _trim(history: list[dict]) -> list[dict]:
     """Keep the conversation, drop the bulk of older tool results.
 
@@ -242,11 +259,7 @@ def answer(question: str, history: list[dict], chain: Chain, snap: Snapshot) -> 
         messages.append({
             "role": "assistant",
             "content": completion.text or None,
-            "tool_calls": [
-                {"id": c.id, "type": "function",
-                 "function": {"name": c.name, "arguments": json.dumps(c.arguments)}}
-                for c in completion.tool_calls
-            ],
+            "tool_calls": [_echo(c) for c in completion.tool_calls],
         })
 
         for call in completion.tool_calls:

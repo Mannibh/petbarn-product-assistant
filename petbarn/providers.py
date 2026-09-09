@@ -34,6 +34,11 @@ class ToolCall:
     id: str
     name: str
     arguments: dict[str, Any]
+    # Provider-specific data attached to the call that has to be handed back
+    # verbatim on the next request. Gemini 3 puts a thought signature here and
+    # rejects the follow-up with a 400 if it is missing, which turns every
+    # multi-round conversation into a single-round one.
+    extra: dict[str, Any] | None = None
 
 
 @dataclass(frozen=True)
@@ -121,6 +126,7 @@ class OpenAICompatible:
                 id=call.id,
                 name=call.function.name,
                 arguments=_parse_arguments(call.function.arguments, self.name),
+                extra=call.model_dump().get("extra_content"),
             )
             for call in (choice.tool_calls or [])
         )
@@ -302,16 +308,30 @@ class Chain:
         raise ProviderUnavailable("; ".join(problems) or "every provider has failed")
 
 
-# Ordered by headroom rather than quality. Groq is capable but rations 8,000
-# tokens a minute, and a comparison resends a growing transcript several times,
-# so it fails partway through an answer the visitor is already watching. That
-# reads as our tools breaking, which is worse than being a little slower.
+# Ordered by how the app feels to someone waiting, then by headroom.
+#
+# The lite model is first because it is five times faster on a comparison, and
+# measurably so: three runs each gave 4.9-5.5 seconds against 10.7-28.5 for
+# gemini-3.6-flash and 13.8-23.6 for gemini-3.5-flash. Its answers are no worse
+# here because the tools do the arithmetic and the model only has to read the
+# numbers and write them up, which is what a small model is good at.
+#
+# Groq is second rather than first despite being quick: its free tier rations
+# 8,000 tokens a minute, and a comparison resends a growing transcript several
+# times, so it fails partway through an answer already on screen. That reads as
+# the tools breaking, which is worse than waiting.
+#
+# gemini-2.5-flash is deliberately absent. It is still listed by the models
+# endpoint but returns 404 to keys created recently, which is a good reminder
+# that a model list is not a promise.
 CANDIDATES = (
-    ("gemini", "GEMINI_API_KEY", "gemini-2.5-flash",
+    ("gemini", "GEMINI_API_KEY", "gemini-3.5-flash-lite",
+     "https://generativelanguage.googleapis.com/v1beta/openai/"),
+    ("gemini-flash", "GEMINI_API_KEY", "gemini-3.6-flash",
      "https://generativelanguage.googleapis.com/v1beta/openai/"),
     ("groq", "GROQ_API_KEY", "openai/gpt-oss-120b",
      "https://api.groq.com/openai/v1"),
-    ("openrouter", "OPENROUTER_API_KEY", "google/gemini-2.5-flash",
+    ("openrouter", "OPENROUTER_API_KEY", "google/gemini-3.5-flash",
      "https://openrouter.ai/api/v1"),
 )
 
