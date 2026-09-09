@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: petbarn-product-assistant
+    runtime: python
+    plan: free
+    # Sydney is not offered on the free plan; Singapore is the closest region
+    # to the Australian audience and to Petbarn's own edge.
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    # Streamlit binds to localhost by default, which is unreachable inside a
+    # container, and Render assigns the port at runtime.
+    startCommand: >-
+      streamlit run streamlit_app.py
+      --server.address 0.0.0.0
+      --server.port $PORT
+      --server.headless true
+      --browser.gatherUsageStats false
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.14
+      # Set in the Render dashboard, never in this file.
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
