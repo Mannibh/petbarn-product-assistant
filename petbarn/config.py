@@ -55,8 +55,12 @@ class Limits:
     # short stub, because a growing transcript is what actually exhausts a
     # per-minute allowance during a comparison.
     history_turns: int = 6
-    turn_deadline_seconds: float = 45.0
-    request_timeout_seconds: float = 25.0
+    # Generous because the free tier this deploys to allots a tenth of a CPU.
+    # A request that takes four seconds from a laptop can take many times that
+    # there, and timing out means the visitor gets the no-model answer instead
+    # of a real one, which is a worse outcome than waiting.
+    turn_deadline_seconds: float = 110.0
+    request_timeout_seconds: float = 45.0
     # Shown as a counter, never enforced as security: a new session is one
     # refresh away and pretending otherwise would be dishonest.
     session_turn_budget: int = 25
