@@ -110,7 +110,7 @@ def _round(value: float | None, places: int = 2) -> float | None:
     return None if value is None else round(value, places)
 
 
-def _sentiment_block(item, reviews, aspect: str | None) -> dict[str, Any]:
+def _sentiment_block(item, reviews, aspect: str | None, captured_on: date) -> dict[str, Any]:
     """Everything this project is willing to call sentiment.
 
     Three layers, weakest inference last. The star distribution is what people
@@ -123,7 +123,10 @@ def _sentiment_block(item, reviews, aspect: str | None) -> dict[str, Any]:
     mixed = [r for r in reviews if r.rating == 3]
     negative = [r for r in reviews if r.rating <= 2]
 
-    recent = analysis.recent(reviews, today=date.today())
+    # Anchored on the capture date. Against the wall clock the window shrinks
+    # every day the snapshot ages and is empty ninety days after ingest, while
+    # the field still calls itself the last 90 days.
+    recent = analysis.recent(reviews, today=captured_on)
     averages = item.summary.secondary_averages
 
     quality_minus_value = None
@@ -193,10 +196,12 @@ def _sentiment_block(item, reviews, aspect: str | None) -> dict[str, Any]:
                 "mean_rating_of_mentioners": row.mean_rating,
                 "difference_vs_other_reviewers": row.delta_vs_others,
                 "low_confidence": row.low_confidence,
+                **({"of_which_deny_it": row.denials} if row.denials else {}),
             }
             for row in table
         ],
         "last_90_days": {
+            "window_ends": captured_on.isoformat(),
             "written_reviews": len(recent),
             "mean_rating": analysis.mean([r.rating for r in recent]) if recent else None,
         },
@@ -231,7 +236,7 @@ def get_product_reviews_and_sentiment(
     payload = {
         "status": "ok",
         "product": {"id": catalogue_id, "name": item.display_name},
-        "sentiment": _sentiment_block(item, reviews, aspect),
+        "sentiment": _sentiment_block(item, reviews, aspect, snap.captured_at.date()),
         "quotes": [
             {
                 "rating": q.rating,

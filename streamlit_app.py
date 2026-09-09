@@ -30,7 +30,7 @@ STARTERS = [
     "What are people saying about the price and quality of the Black Hawk lamb and rice?",
     "Compare the reviews between the NexGard Spectra and the Simparica Trio.",
     "What are the main pros and cons of the Breeders Choice cat litter?",
-    "Which dog food do reviewers think is the best value?",
+    "What do reviewers say about the price of the Royal Canin Maxi?",
 ]
 
 st.set_page_config(page_title="Petbarn product assistant", page_icon="🐾", layout="centered")

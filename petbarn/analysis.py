@@ -94,6 +94,10 @@ class AspectStat:
     # proportion to how many of them there are, which was up to threefold here.
     delta_vs_others: float
     low_confidence: bool
+    # Mentions that deny the thing rather than report it. On a veterinary
+    # medicine, four reviewers writing "no side effects" is not four adverse
+    # events, and a count with no polarity says exactly that.
+    denials: int = 0
 
 
 @dataclass(frozen=True)
@@ -141,6 +145,7 @@ def aspect_row(
     other_mean = sum(r.rating for r in others) / len(others) if others else hit_mean
 
     return AspectStat(
+        denials=sum(1 for r in hits if NEGATED_COMPLAINT.search(r.body)),
         aspect=aspect,
         label=label,
         mentions=len(hits),
