@@ -18,10 +18,6 @@ import unicodedata
 
 # Characters that render as nothing but survive a copy-paste: zero-width spaces
 # and joiners, the word joiner, and the bidirectional overrides that can make
-# text display in a different order than it is stored. Written as escapes
-# rather than literal codepoints, which would leave this line looking empty.
-# Characters that render as nothing but survive a copy-paste: zero-width spaces
-# and joiners, the word joiner, and the bidirectional overrides that can make
 # text display in a different order than it is stored. Written as escapes: with
 # the codepoints themselves this line looks like an empty pair of brackets, and
 # a reader cannot tell what it matches or check it in a diff.
