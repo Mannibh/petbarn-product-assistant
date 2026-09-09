@@ -261,10 +261,13 @@ class Anthropic:
 
 @dataclass
 class Chain:
-    """Providers in order of preference, with the failed ones remembered.
+    """Providers in order of preference, with the failed ones rested briefly.
 
-    Once a rung fails it is skipped for the rest of the session, so the wait for
-    a dead provider is paid once rather than on every question.
+    A rung that fails is skipped for the next few turns rather than for the
+    session, so the wait for a dead provider is paid once instead of on every
+    question, and a rate limit that clears does not cost the rest of the visit.
+    The chain is built per visitor, so one person resting a provider does not
+    rest it for anyone else.
     """
 
     providers: list[Provider] = field(default_factory=list)
