@@ -18,7 +18,7 @@ git clone https://github.com/Mannibh/petbarn-product-assistant
 cd petbarn-product-assistant
 python -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
 
-.venv/bin/python -m pytest tests/ -q          # 167 tests, no network, no API key
+.venv/bin/python -m pytest tests/ -q          # 177 tests, no network, no API key
 ```
 
 To run the app, put a free key in `.streamlit/secrets.toml` (see `secrets.toml.example`)
@@ -150,7 +150,7 @@ Captured 8 September 2026 from petbarn.com.au and its public Bazaarvoice review 
 
 ## Testing
 
-167 tests, offline, no API key, about 13 seconds. Providers are stubbed; the page is driven
+177 tests, offline, no API key, about 13 seconds. Providers are stubbed; the page is driven
 with Streamlit's own headless harness.
 
 The tests aim at the ways this system could state something false rather than at coverage.
