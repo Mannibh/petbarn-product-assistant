@@ -5,6 +5,13 @@ real product data and 3,054 real customer reviews.
 
 **Live app:** https://petbarn-product-assistant.onrender.com
 
+Deployed twice from the same commit, because the two free tiers fail differently. Render
+never shows a wake-up screen but allots a tenth of a CPU; Streamlit Community Cloud has real
+CPU but sleeps after twelve hours and asks the visitor to click. On a constrained host the
+model provider may be unreachable, in which case the app falls back to rendering the
+underlying data with a banner saying so - that path is deliberate and described below. It
+runs fully with a free API key locally.
+
 ```
 "What are people saying about the price and quality of the Black Hawk lamb and rice?"
 "Compare the reviews between the NexGard Spectra and the Simparica Trio."
