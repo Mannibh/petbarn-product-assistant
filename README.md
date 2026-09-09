@@ -43,6 +43,9 @@ Bazaarvoice ────┘   (offline)   (committed)      (2)     (LLM)
 An offline script scrapes the products and their full review history into a committed
 snapshot. The chat app reads that snapshot and gives a language model two tools over it.
 
+**[ARCHITECTURE.md](ARCHITECTURE.md)** has the diagrams: the system, and one question traced
+end to end.
+
 | Module | Job |
 |---|---|
 | `models.py` | the data contract between the scraper and the app |
