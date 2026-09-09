@@ -20,7 +20,12 @@ import unicodedata
 # and joiners, the word joiner, and the bidirectional overrides that can make
 # text display in a different order than it is stored. Written as escapes
 # rather than literal codepoints, which would leave this line looking empty.
-INVISIBLE = re.compile("[​-‏‪-‮⁠-⁤﻿]")
+# Characters that render as nothing but survive a copy-paste: zero-width spaces
+# and joiners, the word joiner, and the bidirectional overrides that can make
+# text display in a different order than it is stored. Written as escapes: with
+# the codepoints themselves this line looks like an empty pair of brackets, and
+# a reader cannot tell what it matches or check it in a diff.
+INVISIBLE = re.compile("[\u200b-\u200f\u202a-\u202e\u2060-\u2064\ufeff]")
 
 # C0 and C1 control codes, keeping tab and newline.
 CONTROLS = re.compile(r"[\x00-\x08\x0b-\x0c\x0e-\x1f\x7f-\x9f]")

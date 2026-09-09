@@ -29,6 +29,7 @@ CATALOGUE: tuple[CatalogueEntry, ...] = (
         slug="royal-canin-maxi-adult-dog-food-15kg",
         aliases=(
             "royal canin maxi",
+            "royal canin",
             "royal canin adult",
             "royal canin large breed",
             "royal canin for big dogs",
@@ -46,6 +47,7 @@ CATALOGUE: tuple[CatalogueEntry, ...] = (
         slug="black-hawk-lamb-rice-adult-dog-food",
         aliases=(
             "black hawk lamb",
+            "black hawk",
             "black hawk lamb and rice",
             "blackhawk lamb rice",
             "black hawk adult dog food",
@@ -62,6 +64,7 @@ CATALOGUE: tuple[CatalogueEntry, ...] = (
         slug="prime100-kangaroo-pumpkin-cooked-dog-roll-2kg",
         aliases=(
             "prime100",
+            "prime 100",
             "prime 100 roll",
             "kangaroo dog roll",
             "roo and pumpkin",
@@ -79,6 +82,7 @@ CATALOGUE: tuple[CatalogueEntry, ...] = (
         slug="pro-plan-chicken-adult-cat-pouch-85gx12",
         aliases=(
             "pro plan chicken",
+            "pro plan",
             "pro plan cat",
             "proplan cat pouches",
             "chicken cat pouches",
@@ -95,6 +99,7 @@ CATALOGUE: tuple[CatalogueEntry, ...] = (
         slug="breeders-choice-cat-litter",
         aliases=(
             "breeders choice",
+            "breeders",
             "breeder's choice litter",
             "paper cat litter",
             "recycled paper litter",
@@ -111,6 +116,7 @@ CATALOGUE: tuple[CatalogueEntry, ...] = (
         slug="barkers-best-variety-bone-biscuit-dog-treat-750g",
         aliases=(
             "barkers best",
+            "barkers",
             "bone biscuits",
             "barkers biscuits",
             "variety bone biscuit",
@@ -143,6 +149,7 @@ CATALOGUE: tuple[CatalogueEntry, ...] = (
         slug="nexgard-spectra-for-dogs-15-1-30kg",
         aliases=(
             "nexgard",
+            "nexgard spectra chew",
             "nexgard spectra",
             "nexgard for large dogs",
             "flea and worm chew",
@@ -159,6 +166,7 @@ CATALOGUE: tuple[CatalogueEntry, ...] = (
         slug="simparica-trio-20-1-40kg-dog-flea-tick-worm-chew",
         aliases=(
             "simparica",
+            "simparica chew",
             "simparica trio",
             "flea tick and worm chew",
             "simparica for big dogs",

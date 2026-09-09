@@ -170,7 +170,7 @@ def _fallback(question: str, snap: Snapshot) -> Turn:
         product, sentiment = details["product"], reviews["sentiment"]
         lines += [
             "",
-            f"**{product['name']}** — ${product['price_aud']}"
+            f"**{product['name']}** - ${product['price_aud']}"
             + (f" (members ${product['member_price_aud']})" if product["member_price_aud"] else ""),
             f"{sentiment['mean_rating']} stars from "
             f"{sentiment['all_reviews_including_ratings_only']} reviews, "
