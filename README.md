@@ -3,7 +3,7 @@
 A chat assistant that answers questions about nine Petbarn products by calling two tools over
 real product data and 3,054 real customer reviews.
 
-**Live app:** _URL_
+**Live app:** https://petbarn-product-assistant.onrender.com
 
 ```
 "What are people saying about the price and quality of the Black Hawk lamb and rice?"
