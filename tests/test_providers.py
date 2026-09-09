@@ -228,9 +228,11 @@ class _Response:
 def test_the_openai_compatible_client_sends_and_parses_a_real_shaped_call(monkeypatch):
     """Neither provider's complete() had a test: replacing both bodies with a
     raised exception left the whole suite green."""
-    import openai
+    from petbarn import providers
 
-    monkeypatch.setattr(openai, "OpenAI", FakeOpenAI)
+    # Patch where it is used, not where it is defined: the client is imported
+    # at module load so the cost is not charged to a request.
+    monkeypatch.setattr(providers, "OpenAI", FakeOpenAI)
     provider = OpenAICompatible("gemini", "gemini-2.5-flash", "https://example/v1", "k")
 
     completion = provider.complete([{"role": "user", "content": "hi"}], [{"t": 1}], timeout=9)
@@ -250,12 +252,12 @@ def test_the_openai_compatible_client_sends_and_parses_a_real_shaped_call(monkey
 
 def test_an_sdk_failure_becomes_provider_unavailable(monkeypatch):
     """Anything else stops the chain instead of moving it on."""
-    import openai
+    from petbarn import providers
 
     def explode(**kwargs):
         raise RuntimeError("connection reset")
 
-    monkeypatch.setattr(openai, "OpenAI", explode)
+    monkeypatch.setattr(providers, "OpenAI", explode)
     with pytest.raises(ProviderUnavailable, match="connection reset"):
         OpenAICompatible("groq", "m", "u", "k").complete([], [])
 
