@@ -23,6 +23,7 @@ from dataclasses import dataclass, field
 from typing import Any, Protocol
 
 import httpx
+from openai import OpenAI
 
 from petbarn.config import LIMITS, secret
 
@@ -95,8 +96,6 @@ class OpenAICompatible:
 
     def complete(self, messages: list[dict], tools: list[dict],
                  timeout: float | None = None) -> Completion:
-        from openai import OpenAI
-
         try:
             # Construction is inside the try as well: a malformed base URL or a
             # key the SDK rejects on sight fails here, and outside the try that
